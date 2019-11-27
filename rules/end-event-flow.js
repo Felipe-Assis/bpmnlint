@@ -5,7 +5,7 @@ const {
 
 
 /**
- * A rule that checks the presence of an end event per scope.
+B.2 Outgoing Sequence Flow not allowed in an End Event
  */
 module.exports = function() {
 
@@ -20,11 +20,9 @@ module.exports = function() {
 
   function check(node, reporter) {
 
-
-    console.log(node);
-  //   if (node.)
-  // const outgoing = node.outgoing || [];
-
+      if (node.type == 'bpmn:EndEvent' && node.flowElements != undefined) {
+        reporter.report(node.id, 'B.2 Outgoing Sequence Flow not allowed in an End Event');
+      }
   }
 
   return { check };
