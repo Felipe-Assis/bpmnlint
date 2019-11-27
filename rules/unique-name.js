@@ -13,7 +13,9 @@ module.exports = function() {
     if (nodeNames.includes(node.name) == true) {
       reporter.report(node.id, 'Model has duplicate activity name');
     }
-    nodeNames.push(node.name);
+    if (nodeNames != undefined) {
+    	nodeNames.push(node.name);
+    }
   }
 
   return {
