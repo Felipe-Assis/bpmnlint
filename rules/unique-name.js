@@ -9,8 +9,7 @@ var nodeNames = [];
 
 module.exports = function() {
   function check(node, reporter) {
-  	console.log(nodeNames)
-    if (nodeNames.includes(node.name) == true) {
+    if (nodeNames.includes(node.name) == true && node.name != undefined) {
       reporter.report(node.id, 'Model has duplicate activity name');
     }
     if (nodeNames != undefined) {
