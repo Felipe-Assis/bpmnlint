@@ -2,6 +2,7 @@
   "extends": "bpmnlint:recommended",
   "rules": {
     "myRule": "off",
-    "no-manual-task": "on"
+    "no-manual-task": "on",
+    "target-namespace": "on"
   }
 }
