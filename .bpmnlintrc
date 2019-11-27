@@ -4,6 +4,7 @@
     "myRule": "off",
     "no-manual-task": "on",
     "target-namespace": "on",
-    "unique-name": "on"
+    "unique-name": "on",
+    "end-event-flow": "on"
   }
 }
