@@ -7,8 +7,8 @@ const {
  * Rule that reports missing targetNamespace on bpmn:Definitions.
  */
 module.exports = function() {
-  eporter.report('aaaa', 'TEST');
   function check(node, reporter) {
+  	reporter.report('aaaa', 'TEST');
     if (is(node, 'bpmn:Definitions') && !node.targetNamespace) {
       reporter.report(node.id, 'Element is missing targetNamespace');
     }
