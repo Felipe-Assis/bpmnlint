@@ -2,17 +2,20 @@ const {
   is
 } = require('bpmnlint-utils');
 
+var nodeNames;
 
 //
 //	B.10 Two Activities in the same Process should not have the same name
 //
 
 module.exports = function() {
-	
+
   function check(node, reporter) {
-    if (is(node, 'bpmn:Definitions') && !node.targetNamespace) {
-      reporter.report(node.id, 'Element is missing targetNamespace');
+  	console.log(nodeNames)
+    if (nodeNames.include(node.name) == true) {
+      reporter.report(node.id, 'Model has duplicate activity name');
     }
+    nodeNames.push(node.name);
   }
 
   return {

@@ -3,6 +3,7 @@
   "rules": {
     "myRule": "off",
     "no-manual-task": "on",
-    "target-namespace": "on"
+    "target-namespace": "on",
+    "unique-name": "on",
   }
 }
