@@ -12,7 +12,6 @@ const {
 module.exports = function() {
 
   function check(node, reporter) {
-  	reporter.report(node.id, 'FAKE ERROR');
     if (!isAny(node, [
       'bpmn:Task',
       'bpmn:Event'
