@@ -12,7 +12,7 @@ module.exports = function() {
 
   function check(node, reporter) {
   	console.log(nodeNames)
-    if (nodeNames.include(node.name) == true) {
+    if (nodeNames.includes(node.name) == true) {
       reporter.report(node.id, 'Model has duplicate activity name');
     }
     nodeNames.push(node.name);
