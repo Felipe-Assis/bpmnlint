@@ -1,22 +1,18 @@
 const {
-  isAny
+  is
 } = require('bpmnlint-utils');
 
+
 /**
- * A rule that checks that no fake join is modeled by attempting
- * to give a task or event join semantics.
- *
- * Users should model a parallel joining gateway
- * to achieve the desired behavior.
+ * Rule that reports missing targetNamespace on bpmn:Definitions.
  */
 module.exports = function() {
 
   function check(node, reporter) {
-
-      reporter.report(node.id, 'Testing!!!');
+      reporter.report(node.id, 'MY CUSTOM ERROR!');
+  }
 
   return {
-    check
+    check: check
   };
-
 };

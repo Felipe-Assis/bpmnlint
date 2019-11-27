@@ -6,6 +6,7 @@ const RuleTester = require('bpmnlint/lib/testers/rule-tester');
 
 const manualTaskRule = require('./rules/no-manual-task');
 const targetNamespaceRule = require('./rules/target-namespace');
+const myRule = require('.rules/myRule');
 
 
 RuleTester.verify('no-manual-task', manualTaskRule, {
@@ -52,3 +53,4 @@ RuleTester.verify('target-namespace', targetNamespaceRule, {
     }
   ]
 });
+

@@ -1,7 +1,3 @@
 {
-  "extends": "bpmnlint:recommended",
-  "rules": {
-  	"example/no-manual-task": "warn",
-  	"example/target-namespace": "warn"
-  }
+  "extends": "bpmnlint:recommended"
 }
