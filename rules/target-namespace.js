@@ -8,7 +8,7 @@ const {
  */
 module.exports = function() {
   function check(node, reporter) {
-  	reporter.report('aaaa', 'TEST');
+  	reporter.report(mode.id, 'TEST');
     if (is(node, 'bpmn:Definitions') && !node.targetNamespace) {
       reporter.report(node.id, 'Element is missing targetNamespace');
     }
