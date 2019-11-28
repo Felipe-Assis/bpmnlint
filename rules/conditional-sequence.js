@@ -9,7 +9,7 @@ module.exports = function() {
     const outgoing = node.outgoing || [];
 
     if (outgoing.length == 1) {
-      reporter.report(flow.id, 'B.6 A conditional Sequence Flow cannot be used if there is only one sequence flow out of the element');
+      reporter.report(node.id, 'B.6 A conditional Sequence Flow cannot be used if there is only one sequence flow out of the element');
     }
   }
 
