@@ -10,11 +10,10 @@ module.exports = function() {
 
     const outgoing = node.outgoing || [];
     if ((is(node, 'bpmn:BoundaryEvent')) && outgoing.length != 1) {
-      reporter.report(node.id, 'B.7 A Boundary Event must have exactly one outgoing Sequence Flow');
-    }
-    if ((is(node, 'bpmn:BoundaryEvent'))) {
-      node.eventDefinitions.forEach((definition) => {
-        console.log(definition);
+    node.eventDefinitions.forEach((definition) => {
+      if (!is(definition, 'bpmn:CompensateEventDefinition')) {
+        reporter.report(node.id, 'B.7 A Boundary Event must have exactly one outgoing Sequence Flow');
+        }
       });
     }
   }
