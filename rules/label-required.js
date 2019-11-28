@@ -50,7 +50,6 @@ module.exports = function() {
 
       if (name.length === 0) {
         reporter.report(node.id, 'Element is missing label/name');
-        reporter.report(node.id, 'Another error');
       }
     }
   }
