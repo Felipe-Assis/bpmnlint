@@ -13,7 +13,9 @@ module.exports = function() {
       reporter.report(node.id, 'B.7 A Boundary Event must have exactly one outgoing Sequence Flow');
     }
     if ((is(node, 'bpmn:BoundaryEvent'))) {
-      console.log(node, 'outgoing')
+      node.eventDefinitions.forEach((definition) => {
+        console.log(definition);
+      });
     }
   }
 
