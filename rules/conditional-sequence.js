@@ -5,7 +5,7 @@ module.exports = function() {
     if (!isConditionalForking(node)) {
       return;
     }
-
+    console.log(node);
     const outgoing = node.outgoing || [];
 
     outgoing.forEach((flow) => {
@@ -14,8 +14,8 @@ module.exports = function() {
         !isDefaultFlow(node, flow)
       );
 
-      if (missingCondition) {
-        reporter.report(flow.id, 'Sequence flow is missing condition');
+      if (outgoing.length == 1) {
+        reporter.report(flow.id, 'B.6 A conditional Sequence Flow cannot be used if there is only one sequence flow out of the element');
       }
     });
   }

@@ -2,9 +2,10 @@
   "extends": "bpmnlint:recommended",
   "rules": {
     "myRule": "off",
-    "no-manual-task": "on",
-    "target-namespace": "on",
-    "unique-name": "on",
-    "end-event-flow": "on"
+    "no-manual-task": "warn",
+    "target-namespace": "warn",
+    "unique-name": "warn",
+    "end-event-flow": "warn",
+    "conditional-sequence": "error"
   }
 }
