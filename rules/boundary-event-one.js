@@ -2,15 +2,10 @@ module.exports = function() {
 
   function check(node, reporter) {
 
-    console.log(node);
-    // if (!isConditionalForking(node)) {
-    //   return;
-    // }
-    // const outgoing = node.outgoing || [];
-
-    // if (outgoing.length == 1) {
-    //   reporter.report(node.id, 'B.6 A conditional Sequence Flow cannot be used if there is only one sequence flow out of the element');
-    // }
+    const outgoing = node.outgoing || [];
+    if (node.type == 'bpmn:BoundaryEvent' && node.outgoing != 1) {
+      reporter.report(node.id, 'B.7 A Boundary Event must have exactly one outgoing Sequence Flow');
+    }
   }
 
   return {
