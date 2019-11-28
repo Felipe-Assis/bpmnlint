@@ -6,6 +6,7 @@
     "target-namespace": "warn",
     "unique-name": "warn",
     "end-event-flow": "warn",
-    "conditional-sequence": "error"
+    "conditional-sequence": "error",
+    "boundary-event-one": "error"
   }
 }

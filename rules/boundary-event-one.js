@@ -2,14 +2,15 @@ module.exports = function() {
 
   function check(node, reporter) {
 
-    if (!isConditionalForking(node)) {
-      return;
-    }
-    const outgoing = node.outgoing || [];
+    console.log(node);
+    // if (!isConditionalForking(node)) {
+    //   return;
+    // }
+    // const outgoing = node.outgoing || [];
 
-    if (outgoing.length == 1) {
-      reporter.report(node.id, 'B.6 A conditional Sequence Flow cannot be used if there is only one sequence flow out of the element');
-    }
+    // if (outgoing.length == 1) {
+    //   reporter.report(node.id, 'B.6 A conditional Sequence Flow cannot be used if there is only one sequence flow out of the element');
+    // }
   }
 
   return {
