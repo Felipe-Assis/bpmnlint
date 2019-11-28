@@ -5,19 +5,12 @@ module.exports = function() {
     if (!isConditionalForking(node)) {
       return;
     }
-    console.log(node);
+    console.log(node)
     const outgoing = node.outgoing || [];
 
-    outgoing.forEach((flow) => {
-      const missingCondition = (
-        !hasCondition(flow) &&
-        !isDefaultFlow(node, flow)
-      );
-
-      if (outgoing.length == 1) {
-        reporter.report(flow.id, 'B.6 A conditional Sequence Flow cannot be used if there is only one sequence flow out of the element');
-      }
-    });
+    if (outgoing.length == 1) {
+      reporter.report(flow.id, 'B.6 A conditional Sequence Flow cannot be used if there is only one sequence flow out of the element');
+    }
   }
 
   return {
