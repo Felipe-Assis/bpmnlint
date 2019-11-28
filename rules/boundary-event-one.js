@@ -1,3 +1,9 @@
+const {
+  is,
+  isAny
+} = require('bpmnlint-utils');
+
+
 module.exports = function() {
 
   function check(node, reporter) {
