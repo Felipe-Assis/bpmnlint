@@ -3,7 +3,7 @@ module.exports = function() {
   function check(node, reporter) {
 
     const outgoing = node.outgoing || [];
-    if ((is(node, 'bpmn:BoundaryEvent') && outgoing != 1) {
+    if ((is(node, 'bpmn:BoundaryEvent')) && outgoing != 1) {
       reporter.report(node.id, 'B.7 A Boundary Event must have exactly one outgoing Sequence Flow');
     }
   }
